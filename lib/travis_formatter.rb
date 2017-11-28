@@ -14,9 +14,7 @@ class TravisFormatter < XCPretty::Simple
 
       # Print out any warnings.
       if !@warnings.compact.empty?
-        open_fold("Warnings")
-        STDOUT.puts @warnings.compact.join("\n")
-        close_fold()
+        # Don't log warnings
       end
 
       # Print out any errors.
